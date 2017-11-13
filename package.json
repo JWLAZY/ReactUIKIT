@@ -1,0 +1,23 @@
+{
+  "name": "rjreactui",
+  "version": "0.0.1",
+  "description": "react ui kits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jianwen-Zheng/ReactUIKIT.git"
+  },
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "Jianwen_Zheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jianwen-Zheng/ReactUIKIT/issues"
+  },
+  "homepage": "https://github.com/Jianwen-Zheng/ReactUIKIT#readme"
+}
