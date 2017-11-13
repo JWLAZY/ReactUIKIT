@@ -14,7 +14,10 @@ class Item extends React.Component<void, Props, void> {
   render () {
     return (
       <div className='list_item_container'>
-        {this.props.children}
+        <div className="list_item_info">
+          {this.props.children}
+        </div>
+        {this.props.link? <div className="link">></div> : ''}
       </div>
     );
   }

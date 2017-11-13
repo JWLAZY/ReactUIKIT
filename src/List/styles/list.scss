@@ -1,8 +1,26 @@
 $prefix: list;
 
 .#{$prefix}_container{
-    background-color: #fbfbfb;
+    // background-color: #fbfbfb;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border-top: 1px #e5e5e5 solid;
     .#{$prefix}_item_container{
         background-color: #ffffff;
+        margin-left: 15px;
+        display: flex;
+        border-bottom: 1px #e5e5e5 solid;
+        .list_item_info{
+            flex: 1;
+            display: flex;
+            flex-flow: column;
+        }
+        .link{
+            margin-right: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
