@@ -1,0 +1,8 @@
+$prefix: list;
+
+.#{$prefix}_container{
+    background-color: #fbfbfb;
+    .#{$prefix}_item_container{
+        background-color: #ffffff;
+    }
+}
