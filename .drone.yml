@@ -9,6 +9,7 @@ pipeline:
 
   npm:
     image: plugins/npm
+    repo: npm
     username: zhengjianwen
-    password: meiyoumimanpm
+    password: $$DOCKER_PASS
     email: zhengjianwen@outlook.com
