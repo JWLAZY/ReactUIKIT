@@ -6,3 +6,9 @@ pipeline:
       - npm install
       - echo 'test'
       - npm run lib
+
+  npm:
+    image: plugins/npm
+    username: zhengjianwen
+    password: meiyoumimanpm
+    email: zhengjianwen@outlook.com
