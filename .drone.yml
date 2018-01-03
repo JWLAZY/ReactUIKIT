@@ -25,8 +25,9 @@ pipeline:
 
   telegram:
     image: appleboy/drone-telegram
-    token: 474548109:AAGZQbIe-uJ-Fhk2LZSvZM4nd0Grw7P--Kw
-    to: +8617600113766
+    secrets: [ telegram_token, telegram_to ]
+    token: ${TELEGRAM_TOKEN}
+    to: ${TELEGRAM_TO}
     message: >
       {{#success build.status}}
         build {{build.number}} succeeded. Good job.
