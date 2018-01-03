@@ -4,3 +4,4 @@ pipeline:
     commands:
       - npm install
       - echo 'test'
+      - npm run lib
