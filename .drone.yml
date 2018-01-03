@@ -23,18 +23,28 @@ pipeline:
     when:
       branch: master
 
-  telegram:
-    image: appleboy/drone-telegram
-    secrets: [ telegram_token, telegram_to ]
-    token: ${TELEGRAM_TOKEN}
-    to: ${TELEGRAM_TO}
-    message: >
+  # telegram:
+  #   image: appleboy/drone-telegram
+  #   secrets: [ telegram_token, telegram_to ]
+  #   token: ${TELEGRAM_TOKEN}
+  #   to: ${TELEGRAM_TO}
+  #   message: >
+  #     {{#success build.status}}
+  #       build {{build.number}} succeeded. Good job.
+  #     {{else}}
+  #       build {{build.number}} failed. Fix me please.
+  #     {{/success}}
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: allshare
+    template: >
       {{#success build.status}}
         build {{build.number}} succeeded. Good job.
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
-
+      
   # npm_auth:
       # image: robertstettner/drone-npm-auth
       # secrets: [ npm_username, npm_password, npm_email ]
