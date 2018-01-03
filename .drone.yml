@@ -14,10 +14,9 @@ pipeline:
       - echo $$NPM_PASSWORD
       - echo $$NPM_CONFIG_PASSWORD
     secrets: [ docker_pass, npm_password]
-
   publish:
     image: plugins/npm
-    secrets: [npm_username, npm_password,npm_email ]
+    secrets: [ npm_username, npm_password,npm_email ]
     username:  ${NPM_USERNAME}
     password: ${NPM_PASSWORD}
     email: ${NPM_EMAIL}
