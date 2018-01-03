@@ -12,5 +12,3 @@ pipeline:
     username: zhengjianwen
     password: ${DOCKER_PASS}
     email: zhengjianwen@outlook.com
-    commands: 
-      - echo ${DOCKER_PASS}
