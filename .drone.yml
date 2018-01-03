@@ -11,12 +11,13 @@ pipeline:
       - echo 'test'
       - npm run lib
       - echo $$DOCKER_PASS
+      - echo $$npm_name
     secrets: [ docker_pass]
   publish:
     image: plugins/npm
-    username: ${npm_name}
-    password: ${npm_pass}
-    email: ${npm_email}
+    username: ${{npm_name}}
+    password: ${{npm_pass}}
+    email: ${{npm_email}}
     when:
       branch: master
 
