@@ -7,6 +7,7 @@ pipeline:
       - echo 'test'
       - npm run lib
       - echo $$DOCKER_PASS
+    secrets: [ docker_pass]
 
   npm:
     image: plugins/npm
