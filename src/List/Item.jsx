@@ -15,7 +15,6 @@ class Item extends PureComponent {
           <div className="list_item_info">
             {this.props.children}
           </div>
-          {/* {link} */}
         </div>
     )
   }
