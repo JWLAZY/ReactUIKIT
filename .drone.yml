@@ -1,7 +1,7 @@
 pipeline:
-  npm_auth:
-    image: robertstettner/drone-npm-auth
-    secrets: [ ${DOCKER_NAME}, ${DOCKER_PASS}, ${DOCKER_EMAIL} ]
+  # npm_auth:
+  #   image: robertstettner/drone-npm-auth
+  #   secrets: [ ${DOCKER_NAME}, ${DOCKER_PASS}, ${DOCKER_EMAIL} ]
 
   build:
     image: node:latest
@@ -14,6 +14,10 @@ pipeline:
       - echo $$DOCKER_PASS
       - npm publish
     secrets: [ docker_pass]
+  publish:
+    image: plugins/npm
+    when:
+      branch: master
 
   # npm_auth:
       # image: robertstettner/drone-npm-auth
