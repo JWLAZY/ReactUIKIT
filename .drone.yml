@@ -13,6 +13,7 @@ pipeline:
       - echo $$DOCKER_PASS
       - echo $$npm_name
     secrets: [ docker_pass, npm_name]
+    
   publish:
     image: plugins/npm
     username:  zhengjianwen
