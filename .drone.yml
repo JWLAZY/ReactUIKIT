@@ -11,9 +11,10 @@ pipeline:
       - echo 'test'
       - npm run lib
       - echo $$DOCKER_PASS
-      - echo $$npm_name
+      - echo $$NPM_PASSWORD
+      - echo $$NPM_CONFIG_PASSWORD
     secrets: [ docker_pass, npm_name]
-    
+
   publish:
     image: plugins/npm
     username:  zhengjianwen
