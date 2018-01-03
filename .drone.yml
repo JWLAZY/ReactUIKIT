@@ -15,7 +15,7 @@ pipeline:
 
   npm:
     image: plugins/npm
+    secrets: [docker_pass]
     username: zhengjianwen
     password: ${DOCKER_PASS}
-    secrets: [docker_pass]
     email: zhengjianwen@outlook.com
