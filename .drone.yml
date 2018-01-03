@@ -13,12 +13,14 @@ pipeline:
       - echo $$DOCKER_PASS
       - echo $$NPM_PASSWORD
       - echo $$NPM_CONFIG_PASSWORD
-    secrets: [ docker_pass, npm_name]
+    secrets: [ docker_pass, npm_password]
 
   publish:
     image: plugins/npm
     username:  zhengjianwen
+    password: $$NPM_PASSWORD
     email: zhengjianwen@outlook.com
+    secrets: [npm_password]
     when:
       branch: master
 
