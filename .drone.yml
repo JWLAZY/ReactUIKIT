@@ -23,6 +23,17 @@ pipeline:
     when:
       branch: master
 
+  telegram:
+    image: appleboy/drone-telegram
+    token: 474548109:AAGZQbIe-uJ-Fhk2LZSvZM4nd0Grw7P--Kw
+    to: +8617600113766
+    message: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
+
   # npm_auth:
       # image: robertstettner/drone-npm-auth
       # secrets: [ npm_username, npm_password, npm_email ]
