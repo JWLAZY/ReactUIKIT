@@ -1,4 +1,3 @@
-/* @flow */
 import React, { PropTypes,PureComponent } from 'react';
 import '../../styles/list.scss';
 
