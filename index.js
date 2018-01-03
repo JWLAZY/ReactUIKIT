@@ -1,6 +1,6 @@
-import {List, Item} from './src/List'
+import {List, Item} from './lib/index'
 
-module.exports = {
+export {
     List,
     Item
 }

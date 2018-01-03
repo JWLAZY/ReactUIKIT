@@ -1,15 +1,8 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import './styles/list.scss';
-// type Props = {
-//   name: string,
-//   image: string
-// };
+import '../../styles/list.scss';
 
 class List extends React.Component {
-  // static propTypes = {
-
-  // };
 
   render() {
     return (

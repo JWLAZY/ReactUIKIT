@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import defaultDelete from './images/delete.png';
 import defaultEdit from './images/edit.png';
 import defaultPraise from './images/praise.png';
-import './styles/tarbar.scss';
+import '../../styles/tarbar.scss';
 
 export class TarbarView extends React.Component {
   constructor(props) {

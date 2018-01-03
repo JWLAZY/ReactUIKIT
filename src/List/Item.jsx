@@ -1,7 +1,6 @@
 /* @flow */
 import React, { PropTypes,PureComponent } from 'react';
-import './styles/list.scss';
-// import arrow from '../../static/Images/idg_application_list_arrow.png';
+import '../../styles/list.scss';
 
 class Item extends PureComponent {
   delete(e){
@@ -10,7 +9,6 @@ class Item extends PureComponent {
   }
   
   render() {
-    // let link = this.props.manage ? '' : (this.props.link ? '<div className="link"><img src={arrow} alt=""/></div>' : '');
     return (
       <div className='list_item_container' onClick={this.props.manage ? this.delete.bind(this) : this.props.onClick}>
           {this.props.manage? (<div className='delete-btn'>一</div>) : ''} 
