@@ -20,7 +20,7 @@ pipeline:
     username:  zhengjianwen
     password: $$NPM_PASSWORD
     email: zhengjianwen@outlook.com
-    secrets: [npm_password]
+    secrets: [ NPM_PASSWORD ]
     when:
       branch: master
 
