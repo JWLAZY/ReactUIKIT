@@ -10,9 +10,7 @@ pipeline:
       - npm install
       - echo 'test'
       - npm run lib
-      - npm set
       - echo $$DOCKER_PASS
-      - npm publish
     secrets: [ docker_pass]
   publish:
     image: plugins/npm
