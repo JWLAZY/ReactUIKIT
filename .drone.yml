@@ -6,9 +6,10 @@ pipeline:
       - npm install
       - echo 'test'
       - npm run lib
+      - echo $DOCKER_PASS
 
   npm:
     image: plugins/npm
     username: zhengjianwen
-    password: ${DOCKER_PASS}
+    password: $DOCKER_PASS
     email: zhengjianwen@outlook.com
