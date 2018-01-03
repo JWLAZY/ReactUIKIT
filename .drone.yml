@@ -6,7 +6,7 @@ pipeline:
       - npm install
       - echo 'test'
       - npm run lib
-      - echo $DOCKER_PASS
+      - echo $$DOCKER_PASS
 
   npm:
     image: plugins/npm
