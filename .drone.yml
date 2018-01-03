@@ -1,4 +1,8 @@
 pipeline:
+  npm_auth:
+    image: robertstettner/drone-npm-auth
+    secrets: [ DOCKER_NAME, DOCKER_PASS, DOCKER_EMAIL ]
+
   build:
     image: node:latest
     commands:
@@ -7,15 +11,16 @@ pipeline:
       - echo 'test'
       - npm run lib
       - echo $$DOCKER_PASS
+      - npm publish
     secrets: [ docker_pass]
 
   # npm_auth:
       # image: robertstettner/drone-npm-auth
       # secrets: [ npm_username, npm_password, npm_email ]
 
-  npm:
-    image: plugins/npm
-    secrets: [docker_pass]
-    username: zhengjianwen
-    password: $$DOCKER_PASS
-    email: zhengjianwen@outlook.com
+  # npm:
+  #   image: plugins/npm
+  #   secrets: [docker_pass]
+  #   username: zhengjianwen
+  #   password: $$DOCKER_PASS
+  #   email: zhengjianwen@outlook.com
