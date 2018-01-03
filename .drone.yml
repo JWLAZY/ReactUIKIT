@@ -17,10 +17,10 @@ pipeline:
 
   publish:
     image: plugins/npm
-    username:  zhengjianwen
-    password: $$NPM_PASSWORD
-    email: zhengjianwen@outlook.com
-    secrets: [ NPM_PASSWORD ]
+    secrets: [npm_username, npm_password,npm_email ]
+    username:  ${NPM_USERNAME}
+    password: ${NPM_PASSWORD}
+    email: ${NPM_EMAIL}
     when:
       branch: master
 
