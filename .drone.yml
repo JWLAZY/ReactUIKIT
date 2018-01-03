@@ -9,7 +9,8 @@ pipeline:
 
   npm:
     image: plugins/npm
-    repo: npm
     username: zhengjianwen
-    password: $$DOCKER_PASS
+    password: ${DOCKER_PASS}
     email: zhengjianwen@outlook.com
+    commands: 
+      - echo ${DOCKER_PASS}

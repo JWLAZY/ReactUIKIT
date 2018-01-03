@@ -1,6 +1,6 @@
 {
   "name": "rjreactui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react ui kits",
   "scripts": {
     "clean": "rm -rf ./lib && mkdir lib",
