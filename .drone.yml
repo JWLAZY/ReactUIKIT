@@ -16,7 +16,7 @@ pipeline:
   publish:
     image: plugins/npm
     username:  zhengjianwen
-    password: [ DOCKER_PASS ]
+    password: $$NPM_PASSWORD
     email: zhengjianwen@outlook.com
     when:
       branch: master
