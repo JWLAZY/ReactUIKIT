@@ -15,9 +15,9 @@ pipeline:
     secrets: [ docker_pass]
   publish:
     image: plugins/npm
-    username: {{npm_name}}
-    password: {{npm_pass}}
-    email: {{npm_email}}
+    username: ${npm_name}
+    password: ${npm_pass}
+    email: ${npm_email}
     when:
       branch: master
 
