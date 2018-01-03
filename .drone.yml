@@ -9,9 +9,13 @@ pipeline:
       - echo $$DOCKER_PASS
     secrets: [ docker_pass]
 
+  # npm_auth:
+      # image: robertstettner/drone-npm-auth
+      # secrets: [ npm_username, npm_password, npm_email ]
+
   npm:
     image: plugins/npm
     username: zhengjianwen
     password: $$DOCKER_PASS
-    secrets: [docker_pass]
+    secrets: [DOCKER_PASS]
     email: zhengjianwen@outlook.com
