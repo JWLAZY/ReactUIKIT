@@ -15,8 +15,7 @@ pipeline:
     secrets: [ docker_pass, npm_name]
   publish:
     image: plugins/npm
-    username:  ${NPM_USERNAME}
-    password: $$NPM_PASSWORD
+    username:  zhengjianwen
     email: zhengjianwen@outlook.com
     when:
       branch: master
