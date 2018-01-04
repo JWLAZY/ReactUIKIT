@@ -20,12 +20,13 @@ pipeline:
       branch: master
   slack:
     image: plugins/slack
-    webhook: https://hooks.slack.com/services/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
+    secrets: [ slack_webhook ]
+    webhook: ${SLACK_WEBHOOK}
     channel: allshare
     template: >
       {{#success build.status}}
         build {{build.number}} succeeded. Good job.
+        {{publish}}
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
-      
